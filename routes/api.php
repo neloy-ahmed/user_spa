@@ -19,6 +19,6 @@ use App\Http\Controllers\OneController;
 
 Route::post('/register', 'App\Http\Controllers\OneController@register');
 Route::post('/login', 'App\Http\Controllers\OneController@login');
-Route::post('/logout', 'App\Http\Controllers\OneController@logout')->middleware('auth:api');
+Route::get('/logout', 'App\Http\Controllers\OneController@logout')->middleware('auth:api');
 
 Route::patch('/users/{user}', 'App\Http\Controllers\OneController@update')->middleware('auth:api');
