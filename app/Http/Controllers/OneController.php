@@ -8,9 +8,14 @@ use App\Http\Resources\UserResource;
 
 
 class OneController extends Controller
-{
+{   
     public function register(Request $request)
     {
+
+        // return response()->json([ 'user' => $request->email]);
+        // return response([ 'user' => var_dump($request->name)]);
+        // var_dump($request->name);
+        // return response()->json(['re'=>$request]);
         $validatedData = $request->validate([
             'name' => 'required|max:60',
             'email' => 'email|required|unique:users',
